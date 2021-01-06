@@ -277,8 +277,8 @@ li{
 	-webkit-text-fill-color:transparent;
 }
 
-.fa-snapchat-square:hover{
-	color: #fffc00;
+.fa-github:hover{
+	color: #000000;
 }
 /*End about*/
 
@@ -382,7 +382,7 @@ li{
 	border-radius: .8rem;
 	background-color: rgba(0,0,0,0.05);
 	margin: 0 auto;
-	postion:relative;
+	position:relative;
 	padding:5rem;
 	list-style:none;
 	text-align:left;
