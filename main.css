@@ -69,7 +69,7 @@ img{
 	position: relative;
 	margin-bottom: 1rem;
 }
-
+/*to make line with circle for separating h1 and h6 in all 4 section headings*/
 .section-heading h1::before,
 .section-heading h1::after{
 	content: '';
@@ -79,13 +79,13 @@ img{
 	transform: translateX(-50%);
 	background-color: rgba(255,255,255,0.75);
 }
-
+/*line*/
 .section-heading h1::before{
 	width:10rem;
 	height:3px;
 	border-radius:.8rem; 
 }
-
+/*circle*/
 .section-heading h1::after{
 	width:1.5rem;
 	height:1.5rem;
@@ -99,9 +99,12 @@ img{
 }
 
 .has-margin-right{
-	margin-right: 5rem;
+	margin-right: 3rem;
 }
 
+.has-margin-left{
+	margin-left: 3rem;
+}
 /*End reusable*/
 
 /*Start header*/
@@ -117,7 +120,7 @@ header{
 	top:-100vh;
 	z-index: 50;
 	background-color: #16162d;
-	border-bottom-right-radius: 100%;
+	border-bottom-right-radius:100%;
 	border-bottom-left-radius: 100%;
 	transition:all 650ms cubic-bezier(1,0,0,1); 
 	/* property|duration|timing-function (cubic-bezier)|delay 
@@ -369,8 +372,12 @@ li{
 }
 
 .portfolio-img{
-	width: 50rem;
-	flex:1;
+	flex: 1;
+}
+
+.flappy{
+	width: 40rem;
+	margin-left: 10rem;
 }
 
 .portfolio-description{
@@ -447,7 +454,7 @@ li{
 	top:50%;
 	transform: translateY(-50%);
 }
-
+/*Written dates on left*/
 .timeline .date::before{
 	content:attr(data-date);
 	left:-21rem; 
@@ -565,8 +572,14 @@ input[type="submit"]:hover{
 /*End animations*/
 
 /*Start media queries*/
-
-@media screen and (max-width: 768px){
+@media screen and (max-width: 980px)
+{
+	.nav-link
+	{
+		font-size: 3.5rem;
+	}
+}
+@media screen and (max-width: 780px){
 	body{
 		background: url('images/sitebg2.jpg') no-repeat center fixed;
 		background-size:cover;
@@ -637,6 +650,48 @@ input[type="submit"]:hover{
 
 	.landing-text h6{
 		font-size: 1.4rem;
+	}
+
+	.nav-link{
+		font-size: 3.5rem;
+	}
+
+	.about .container{
+		flex-direction: column;
+	}
+
+	.profile-img{
+		margin: 0 0 7rem 0;
+	}
+
+	.portfolio-item{
+		flex-direction: column;
+	}
+
+	.portfolio-img{
+		margin:0 0 2rem 0;
+		order: 1;
+	}
+
+	.portfolio-description{
+		margin: 0;
+		order:2;
+	}
+	
+	.timeline p{
+		font-size: 1.6rem;
+	}
+
+	.timeline .date::before{
+		font-size: 1.4rem;
+	}
+
+	form{
+		width: 100%
+	}
+
+	.up{
+		right:2rem;
 	}
 }
 /*End media queries*/
